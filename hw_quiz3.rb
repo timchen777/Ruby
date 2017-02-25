@@ -16,7 +16,8 @@
     Q:MVC 架構裡的 M, V, 和 C 分別代表什麼？
     A: 
     The MVC( Model, View, Controller) principle divides the application into three separate but closely cooperative subsystems.
-    (a) M：Model, is implemented in ActiveRecord library, which provides an interface and binding between the tables in a relational database.
+    (a) M：Model, is implemented in ActiveRecord library, which provides an interface and binding between the tables in a relational 
+    database.
     (b) V：View, is triggered by a controller's decision to present the data.
     (c) C：Controller, it directs traffic by querying the models for specific data, and organizing that data (searching, sorting, 
     messaging it) into a form that fits the needs of a given view.
@@ -124,7 +125,6 @@
     12.
     Q:延續第11題，請寫一段程式碼確保使用者在建立新社團時社團名不可以是空白，而且不能超過50個字
     A:
-
     class Group < ActiveRecord::Base
       validates :group_name, presence: true
       validates :group_name, length: { maximum: 50 }
